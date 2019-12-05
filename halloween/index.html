@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scary Halloween Party</title>
+    <link href="https://fonts.googleapis.com/css?family=Nosifer&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
+    <style>
+        body {background-color:black;}
+        #wrapper{position:relative;
+                background-image: url("imagenes/miedo.jpg");
+                width: 952px;
+                height: 635px;
+                margin:auto;
+                box-shadow:darkgrey 20px 20px 20px,
+                darkgrey -20px -20px 20px,
+                darkgrey 20px -20px 20px,
+                darkgrey -20px 20px 20px;}
+        h1 {position:absolute; /* todo lo que va dentro se mueve con él*/
+            left: 120px;
+            top: 90px;
+            font-size:250%;
+            color:maroon;
+            font-family: 'Nosifer', cursive;
+            }
+        #p1 {position:absolute;
+            top:270px;
+            left:240px;
+            font-size: 220%;
+            font-family: 'Big Shoulders Text', cursive;}
+        #handright {position:absolute;
+                width: 220px;
+                height: 170px;
+                /*border: 1px solid white;*/
+                top:460px;
+                left:545px
+                }
+        #handleft {position:absolute;
+                width: 280px;
+                height: 220px;
+                /*border: 1px solid white;*/
+                top:410px;
+                left:140px
+                }
+        #cuervo {position: absolute;
+                top:180px;
+                left:50px;
+                width:15%;
+                height:19%;
+                visibility:hidden}
+        #ship {position: absolute;
+                top:290px;
+                left:770px;
+                width:12%;
+                height:12%;
+                visibility: hidden}
+    </style>
+    <script>
+        function mostrar(id){
+            document.getElementById(id).style.visibility="visible";
+        }
+        function ocultar (id){
+            document.getElementById(id).style.visibility="hidden";
+        }
+        function sonar (id){
+            document.getElementById(id).play();
+        }
+        function parar (id){
+            document.getElementById(id).pause();
+        }
+    
+    </script>
+</head>
+<body>
+    <audio id="truenos">
+        <source src="sonidos/truenos.mp3" type="audio/mpeg">
+    </audio>
+    <div id= "wrapper">
+        <h1>Scary Halloween Party</h1>
+        <p id="p1"> The Sea is dangerous, don't try to touch me.</p>
+        <div id="handright" onclick="mostrar('ship'); sonar('truenos')"></div>
+        <div id="handleft" onclick="mostrar('cuervo')"></div>
+        <img id="cuervo" onclick="ocultar('cuervo')" src="imagenes/cuervo.gif">
+        <img id="ship" onclick="ocultar('ship'); parar('truenos')" src="imagenes/ship.png">
+    </div>
+
+</body>
+</html> 

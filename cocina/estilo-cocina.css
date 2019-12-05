@@ -1,0 +1,42 @@
+/* este es el estilo de mi pagina de cocina*/
+body {background-image: url("imagenes/fondo.jpg");
+    background-size: 290px 290px;}
+#wrapper {width:80%;
+        height:600px;  /*luego lo quito xddddd */
+        overflow:auto; /*Por si no entra el contenido de texto*/
+        background-color: rgba(255, 255, 255, 0.918);
+        margin:auto;
+        margin-top: -1px;
+        padding: 1vw;
+        border:1px solid black;
+        font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        box-shadow: black 20px 20px 20px;}
+h1 {text-align:center;
+    color: brown;}
+ul {list-style-image: url(imagenes/tarta-icono.jpg)}
+#prepara {margin-right: 325px;}
+h2 {color:rgb(102, 41, 6);
+    border-left: 3px solid brown;
+    border-bottom: 1px solid brown;
+    padding: 5px;
+    display:inline-block;}
+dt {font-weight: bold;
+    color:rgb(102, 41, 6) ;}
+table {border:2px solid brown;
+    border-collapse: collapse;}
+td, th {border:1px solid black;
+    padding: 5px;
+    border: 1px solid black;
+    text-align:center;}
+tr:hover {background-color: dimgray;}
+iframe {display:block;
+    border: 2px solid brown;
+    float:right;
+    margin-top: 17px;
+    margin-right: 2vw;}
+
+/*Vamos a utilizar un recurso llamado media query se trata de incluir una especie de "if" y una condición para que cambie algo en el estilo cuando tengo una pantalla pequeña */
+@media only screen and (max-width:500px) {
+    #wrapper {width:100%;}
+    iframe {margin-right: 30px;}
+}
