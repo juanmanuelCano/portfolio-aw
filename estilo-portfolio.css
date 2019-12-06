@@ -6,7 +6,7 @@
 header {position:relative;
         /* relative para que el título que va dentro,
         lo pueda colocar con absolute, donde quiera */
-        background-image:url("imagenes-portfolio/header.jpg");
+        background-image:url("imagenes-portfolio/posibleencabezado.png");
         background-size:cover;
         /* cover adapta bien la imagen responsive
         pero la corta... */
@@ -17,7 +17,7 @@ header {position:relative;
         height:300px;}
 #titulo {position:absolute;
          width:40%;
-         top:125px;
+         top:105px;
 
          /* OJO, RARO: para que el navegador calcule bien
          el centro donde poner el titulo, hay que indicarle
